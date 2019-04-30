@@ -1,0 +1,62 @@
+.production {
+  background: #f8f9f6 url("img/provans.png") top center no-repeat fixed;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.production .product {
+  padding: 5px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 200px 200px 700px 100px;
+  grid-template-rows: 400px;
+}
+
+.production .product .data_holder .cat {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #888888;
+  letter-spacing: .05em;
+}
+
+.production .product .data_holder h3 {
+  font-size: 35px;
+  color: #3b471f;
+  margin: 15px;
+}
+
+.production .product .data_holder p {
+  line-height: 20px;
+}
+
+.production .product .composit {
+  text-align: left;
+}
+
+.production .product .composit p {
+  margin: 20px;
+}
+
+.production .product .composit p input[type=radio] {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  left: 525px;
+  display: none;
+}
+
+.production .product .composit p input[type=radio] label::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: solid #3b471f 1px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
