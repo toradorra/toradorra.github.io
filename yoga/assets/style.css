@@ -169,7 +169,7 @@
   grid-template-columns: auto 1fr 1fr auto;
 }
 
-.wrapper .advatages .adv_box h3 {
+.wrapper .advatages .advetage__box h3 {
   font-family: "Fivo Sans Bold";
   font-size: 50px;
   line-height: 60px;
@@ -178,11 +178,11 @@
   margin-left: -90px;
 }
 
-.wrapper .advatages .adv_box ul {
+.wrapper .advatages .advetage__box ul {
   list-style-image: url(img/liststyle.png);
 }
 
-.wrapper .advatages .adv_box ul li {
+.wrapper .advatages .advetage__box ul li {
   margin-bottom: 50px;
   max-width: 540px;
   font-family: "Fivo Sans Bold";
@@ -191,14 +191,14 @@
   line-height: 40px;
 }
 
-.wrapper .advatages .adv_box ul li span {
+.wrapper .advatages .advetage__box ul li span {
   font-family: "Fivo Sans Light";
   color: #6a7e7d;
   font-size: 18px;
   line-height: 40px;
 }
 
-.wrapper .advatages .adv_box ul li:hover {
+.wrapper .advatages .advetage__box ul li:hover {
   list-style-image: url(img/liststylehov.png);
 }
 
