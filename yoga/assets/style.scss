@@ -18,6 +18,7 @@ $fs-m: 'Fivo Sans Medium';
     width: 100%;
     margin: 0 auto;
     max-width: 1920px;
+    background-color: #fbfcfc;     
 
     img {
         background-size: cover;
@@ -330,7 +331,7 @@ $fs-m: 'Fivo Sans Medium';
         .promos {
           max-width: 1140px;
           margin: 0 auto;
-        }
+           
         
         .promo {
           margin: 1em .5em 1.625em;
@@ -351,11 +352,96 @@ $fs-m: 'Fivo Sans Medium';
 
         }
 
+        .features {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          color: #999999;
+
+        }
+        li {
+          padding: .25em 0;
+        }
+          .brief  {
+            color: $p-col;
+            font-family: $fs-r;
+
+            li {
+                
+                padding: .25em 0;
+                margin-left: 130px;
+                text-align: left;
+                padding-left: 30px;
+                line-height: 30px;
+                margin-left: 60px;
+                padding-left: 70px;
+                background: url(img/li.blue.png) 0px 3px no-repeat;
+                padding-bottom: 30px;
+            }
+        }
+        
+        
+        .price {
+          margin: .5em 0;
+          padding: .25em 0;
+          font-size: 250%;
+          color: #f9f9f9;
+        }
+        .buy {
+          margin: 1em 0 0;
+        }
+        button {
+          padding: 1.6em 3.5em;
+          border: none;
+          border-radius: 40px;
+          background: linear-gradient(#5fcef5, #83e4fc);
+          box-shadow: -21px 21px 24px  rgba(95, 206, 244, 0.3);
+          color: #f9f9f9;
+          cursor: pointer;
+        }
+        
+        .scale {
+            overflow: hidden;
+            .head_sc {
+                 
+
+                font-family: $fs-b;
+                font-size: 30px;
+                line-height: 30px;
+                text-transform: uppercase;
+                color: $w-col;
+                margin-top: 43px;
+            }
+
+            .but_red {
+                background: $g-col;
+                padding:  20px;
+                border: none;
+                border-radius: 40px;
+                box-shadow: -21px 21px 24px  rgba(255, 106, 109, 0.3);
+                color: #f9f9f9;
+                cursor: pointer;
+
+                font-family: $fs-m;
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            .brief {
+                li {
+                background: url(img/li.red.png) 0px 3px no-repeat;
+                }
+            }
+            
+        }
+        
+        
+        
         @media (min-width: 40em) {
           .promo {
             display: inline;
             float: left;
-            width: 33.333%;
+            width: 33%;
             margin: 1em 0 0;
           }
           .promo.first {
@@ -366,66 +452,31 @@ $fs-m: 'Fivo Sans Medium';
             border-left: none;
           }
         }
-        
-        .promo .features {
-          margin: 0;
-          padding: 0;
-          list-style-type: none;
-          color: #999999;
-        }
-        .promo li {
-          padding: .25em 0;
-        }
-        .promo .brief {
-          color: #f9f9f9;
-        }
-        .promo .price {
-          margin: .5em 0;
-          padding: .25em 0;
-          font-size: 250%;
-          color: #f9f9f9;
-        }
-        .promo .buy {
-          margin: 1em 0 0;
-        }
-        .promo button {
-          padding: 1em 3.25em;
-          border: none;
-          border-radius: 40px;
-          background: #292b2e;
-          color: #f9f9f9;
-          cursor: pointer;
-        }
-        .promo button:hover {
-          background: #27282b;
-        }
-        
-        .scale button {
-          background: #64AAA4;
-        }
-        .scale button:hover {
-          background: #4e8d88;
-        }
+
         @media (min-width: 40em) {
           .scale {
             transform: scale(1.2);
-            box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
+            box-shadow: 0px -17px 30px 0px rgba(255, 106, 109, 0.19);
           }
           .scale .price {
             color: #64AAA4;
           }
         }
+        
+        }
     }
 
     footer {
+
        img {
            margin-top: -650px;
-           z-index: -2;
+            
+           position: relative;
        }
 
        .text__cont {
            background-image: url(img/footer-transp.png);
-            
+            position: absolute;
        }
     }
 } 
