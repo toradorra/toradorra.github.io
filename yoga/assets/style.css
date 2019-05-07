@@ -311,12 +311,6 @@
   border-radius: 20px;
 }
 
-.wrapper .prices__box .promos .promo h4 {
-  margin: .25em 0 0;
-  font-size: 170%;
-  font-weight: normal;
-}
-
 .wrapper .prices__box .promos .features {
   margin: 0;
   padding: 0;
@@ -331,6 +325,7 @@
 .wrapper .prices__box .promos .brief {
   color: #6a7e7d;
   font-family: "Fivo Sans Regular";
+  margin-top: 20px;
 }
 
 .wrapper .prices__box .promos .brief li {
@@ -367,16 +362,25 @@
 }
 
 .wrapper .prices__box .promos .scale {
+  width: 300px;
+  background: #fff;
+  margin: 40px auto;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .wrapper .prices__box .promos .scale .head_sc {
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  background: #ff5e5c;
+  color: #fff;
   font-family: "Fivo Sans Bold";
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #fff;
-  margin-top: 43px;
+  margin-top: -5px;
 }
 
 .wrapper .prices__box .promos .scale .but_red {
@@ -422,12 +426,42 @@
   }
 }
 
-.wrapper footer img {
-  margin-top: -650px;
-  position: relative;
+.wrapper footer .foot__box {
+  background-image: url(img/footer.png);
 }
 
-.wrapper footer .text__cont {
-  background-image: url(img/footer-transp.png);
+.wrapper footer .foot__box .footer__lists img {
+  margin-top: 250px;
+  margin-left: 250px;
+}
+
+.wrapper footer .foot__box .footer__lists .foot_menu {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
+  top: 6100px;
+  left: 430px;
+  margin-bottom: 250px;
+}
+
+.wrapper footer .foot__box .footer__lists .foot_menu li {
+  color: #6a7e7d;
+  font-family: "Fivo Sans Regular";
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  margin-right: 133px;
+}
+
+.wrapper footer .foot__box .footer__lists .foot_menu li a {
+  color: #6a7e7d;
+}
+
+.wrapper footer .foot__box .footer__lists .foot_menu li:first-child {
+  font-family: "Fivo Sans Heavy";
+  font-size: 18px;
+  line-height: 40px;
+  margin-bottom: 60px;
+  color: #3b3838;
+  text-transform: uppercase;
 }

@@ -11,10 +11,9 @@ $fs-o: 'Fivo Sans Oblique';
 $fs-m: 'Fivo Sans Medium';
 
 @import '_mixins';
-        
+@import 'adaptiv';        
 
 .wrapper {
-     
     width: 100%;
     margin: 0 auto;
     max-width: 1920px;
@@ -343,12 +342,6 @@ $fs-m: 'Fivo Sans Medium';
           color: $p-col;
           text-align: center;
           border-radius: 20px;
-            
-          h4 {
-          margin     : .25em 0 0;
-          font-size  : 170%;
-          font-weight: normal;
-         }
 
         }
 
@@ -365,6 +358,7 @@ $fs-m: 'Fivo Sans Medium';
           .brief  {
             color: $p-col;
             font-family: $fs-r;
+            margin-top: 20px;
 
             li {
                 
@@ -401,16 +395,25 @@ $fs-m: 'Fivo Sans Medium';
         }
         
         .scale {
-            overflow: hidden;
-            .head_sc {
-                 
+            width:300px;
+            background: #fff;
+            margin:40px auto;
+            border-radius: 4px;
+            overflow: hidden; 
 
+            .head_sc {
+                font-weight: 700;
+                text-align: center;
+                padding: 20px;
+                background: #ff5e5c;
+                color: #fff;
+            
                 font-family: $fs-b;
                 font-size: 30px;
                 line-height: 30px;
                 text-transform: uppercase;
                 color: $w-col;
-                margin-top: 43px;
+                margin-top: -5px;
             }
 
             .but_red {
@@ -467,17 +470,55 @@ $fs-m: 'Fivo Sans Medium';
     }
 
     footer {
-
-       img {
-           margin-top: -650px;
+        .foot__box {
+            background-image: url(img/footer.png) ;
             
-           position: relative;
-       }
+            .footer__lists {
+                 
+                img {
+                    margin-top: 250px;
+                    margin-left: 250px;
+                }
 
-       .text__cont {
-           background-image: url(img/footer-transp.png);
-            position: absolute;
-       }
+                .foot_menu {
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 6100px;
+                    left: 430px;
+                    margin-bottom: 250px;
+                    
+                
+                        li {
+                            color: $p-col;
+                            font-family: $fs-r;
+                            font-size: 16px;
+                            line-height: 30px;
+                            margin-bottom: 25px;
+                            margin-right: 133px;
+
+                            a {
+                                color: $p-col;
+                            }
+                            
+                            &:first-child {
+                                font-family: $fs-h;
+                                font-size: 18px;
+                                line-height: 40px;
+                                margin-bottom: 60px;
+                                color: $h-col;
+                                text-transform: uppercase;
+                            }
+                            
+                        }     
+                }
+                
+            }
+             
+
+             
+        }   
     }
 } 
+
 
