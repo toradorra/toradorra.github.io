@@ -114,6 +114,10 @@ html {
 
              background: url(img/blue.png) 100% 100%;
              background-size: cover;
+            
+            &:hover {
+                transform: scale(1);
+            }
 
             .text__cont {
                  display: grid;
@@ -274,9 +278,7 @@ html {
                 form {
                     margin-top: -200px;
                     margin-bottom: 100px;
-                    
-                     
-                    
+                  
                     [type=name] {
                         background: transparent;
                         border: 1px solid $white-col;

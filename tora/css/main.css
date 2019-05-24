@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap");
+@font-face {
+  font-family: 'code-pro';
+  src: url("app/fonts/Sourcecodeprolight.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #000;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: code-pro, sans-serif;
+  overflow-x: hidden;
+  opacity: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.head__menu li {
+  text-decoration: none;
+}
+
+.general__block {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

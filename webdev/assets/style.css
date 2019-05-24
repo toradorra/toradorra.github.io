@@ -105,6 +105,10 @@ html {
   background-size: cover;
 }
 
+#wrapper .main .vertical__main:hover {
+  transform: scale(1);
+}
+
 #wrapper .main .vertical__main .text__cont {
   display: grid;
   grid-template-columns: 1fr;
