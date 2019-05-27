@@ -93,13 +93,7 @@ a {
 .general__block .container .left__side {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  padding: 20px;
-}
-
-.general__block .container .left__side h2 {
-  font-family: "Caveat", cursive;
-  font-size: 4em;
-  font-weight: 100;
+  padding: 5%;
 }
 
 .general__block .container .left__side p {
