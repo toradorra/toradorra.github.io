@@ -83,10 +83,35 @@ a
    grid-column: 1 / 2
    grid-row: 1 / 2
    padding: 5%
-   p
-    margin-top: 20%
-    max-width: 35vw
-    text-align: right
+   .typewriter 
+    h2
+      font-size: 3em
+      color: $dark
+      font-family: monospace
+      overflow: hidden
+      border-right: .15em solid $pink
+      white-space: nowrap
+      margin: 0 auto
+      letter-spacing: .15em
+      animation: typing 6s steps(44, end) 1s 1 normal both, blink-caret 500ms infinite normal
+      @keyframes typing
+        from
+          width: 0
+
+        to
+          width: 13em
+
+      @keyframes blink-caret
+        from, to
+          border-right-color: $pink
+
+        50%
+          border-right-color: transparent
+   
+    p
+      margin-top: 20%
+      max-width: 35vw
+      text-align: right
 
   .right__side
     grid-column: 2 / 3
@@ -109,89 +134,87 @@ a
   h2
     font-size: 3em
     font-weight: 300
-/* Stats
+/* Stat
 .stats-container
   width: 100%
   max-width: 1000px
   display: flex
   align-content: center
 
-.stat-item
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-  position: relative
-  display: inline-block
-  width: 20%
-  padding: 2%
-  img
-    position: absolute
-    width: 100%
-    top: 0
-    left: 0
-
-.stat-path, .stat-back
-  stroke-linecap: round
-  stroke-width: 2
-  fill: none
-
-@media only screen and (max-width: 580px)
   .stat-item
-    width: 50%
-
-/* Tooltip
-
-.tooltip
-  .tooltiptext
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     box-sizing: border-box
-    position: absolute
-    top: 90%
-    left: 50%
-    -webkit-transform: translateX(-50%)
-    -ms-transform: translateX(-50%)
-    -o-transform: translateX(-50%)
-    transform: translateX(-50%)
-    padding: 6px 12px
-    background: #dddddd
-    color: $back-l
-    letter-spacing: 1px
-    text-align: center
-    white-space: nowrap
-    visibility: hidden
-    z-index: 1
-    span
-      display: block
-      color: #ffffff
-    &:after
-      content: ""
+    position: relative
+    display: inline-block
+    width: 20%
+    padding: 2%
+    img
       position: absolute
-      bottom: 100%
+      width: 100%
+      top: 0
+      left: 0
+
+  .stat-path, .stat-back
+    stroke-linecap: round
+    stroke-width: 2
+    fill: none
+
+  @media only screen and (max-width: 580px)
+    .stat-item
+      width: 50%
+
+  .tooltip
+    .tooltiptext
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      position: absolute
+      top: 90%
       left: 50%
-      margin-left: -5px
-      border-width: 5px
-      border-style: solid
-      border-color: transparent transparent currentColor transparent
-  &:hover .tooltiptext
-    visibility: visible
-  .fab
-    position: absolute
-    top: 35%
-    left: 35%
-  .fa-gulp
-    left: 40%
-    color: $gulp
-  .fa-js
-    color: $JS
-  .fa-html5
-    color: $html
-  .fa-sass
-    color: $sass
-  .fa-github-alt
-    color: $git
-  .fa-adobe
-    color: $adobe
+      -webkit-transform: translateX(-50%)
+      -ms-transform: translateX(-50%)
+      -o-transform: translateX(-50%)
+      transform: translateX(-50%)
+      padding: 6px 12px
+      background: #dddddd
+      color: $back-l
+      letter-spacing: 1px
+      text-align: center
+      white-space: nowrap
+      visibility: hidden
+      z-index: 1
+      span
+        display: block
+        color: #ffffff
+      &:after
+        content: ""
+        position: absolute
+        bottom: 100%
+        left: 50%
+        margin-left: -5px
+        border-width: 5px
+        border-style: solid
+        border-color: transparent transparent currentColor transparent
+    &:hover .tooltiptext
+      visibility: visible
+    .fab
+      position: absolute
+      top: 35%
+      left: 35%
+    .fa-gulp
+      left: 40%
+      color: $gulp
+    .fa-js
+      color: $JS
+    .fa-html5
+      color: $html
+    .fa-sass
+      color: $sass
+    .fa-github-alt
+      color: $git
+    .fa-adobe
+      color: $adobe
 
 
 .info__block

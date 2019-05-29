@@ -52,10 +52,3 @@ function triggerStats(){
     });
   });
 };
-
-const instance = new TypeIt('#replaceStrings', {
- strings: [". Добро пожаловать", ". Привет"],
- speed: 200,
- breakLines: true,
- waitUntilVisible: true
-}).go();

@@ -96,7 +96,37 @@ a {
   padding: 5%;
 }
 
-.general__block .container .left__side p {
+.general__block .container .left__side .typewriter h2 {
+  font-size: 3em;
+  color: #111;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid #aa9298;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 6s steps(44, end) 1s 1 normal both, blink-caret 500ms infinite normal;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13em;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-right-color: #aa9298;
+  }
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+.general__block .container .left__side .typewriter p {
   margin-top: 20%;
   max-width: 35vw;
   text-align: right;
@@ -127,7 +157,7 @@ a {
   font-weight: 300;
 }
 
-/* Stats */
+/* Stat */
 .stats-container {
   width: 100%;
   max-width: 1000px;
@@ -135,7 +165,7 @@ a {
   align-content: center;
 }
 
-.stat-item {
+.stats-container .stat-item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -145,27 +175,26 @@ a {
   padding: 2%;
 }
 
-.stat-item img {
+.stats-container .stat-item img {
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
 }
 
-.stat-path, .stat-back {
+.stats-container .stat-path, .stats-container .stat-back {
   stroke-linecap: round;
   stroke-width: 2;
   fill: none;
 }
 
 @media only screen and (max-width: 580px) {
-  .stat-item {
+  .stats-container .stat-item {
     width: 50%;
   }
 }
 
-/* Tooltip */
-.tooltip .tooltiptext {
+.stats-container .tooltip .tooltiptext {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -186,12 +215,12 @@ a {
   z-index: 1;
 }
 
-.tooltip .tooltiptext span {
+.stats-container .tooltip .tooltiptext span {
   display: block;
   color: #ffffff;
 }
 
-.tooltip .tooltiptext:after {
+.stats-container .tooltip .tooltiptext:after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -202,38 +231,38 @@ a {
   border-color: transparent transparent currentColor transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.stats-container .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 
-.tooltip .fab {
+.stats-container .tooltip .fab {
   position: absolute;
   top: 35%;
   left: 35%;
 }
 
-.tooltip .fa-gulp {
+.stats-container .tooltip .fa-gulp {
   left: 40%;
   color: #DB4446;
 }
 
-.tooltip .fa-js {
+.stats-container .tooltip .fa-js {
   color: #F0DB4F;
 }
 
-.tooltip .fa-html5 {
+.stats-container .tooltip .fa-html5 {
   color: #FF8C00;
 }
 
-.tooltip .fa-sass {
+.stats-container .tooltip .fa-sass {
   color: #F08080;
 }
 
-.tooltip .fa-github-alt {
+.stats-container .tooltip .fa-github-alt {
   color: #111;
 }
 
-.tooltip .fa-adobe {
+.stats-container .tooltip .fa-adobe {
   color: #4682B4;
 }
 
