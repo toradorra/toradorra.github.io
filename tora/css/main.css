@@ -157,15 +157,14 @@ a {
   font-weight: 300;
 }
 
-/* Stat */
-.stats-container {
+.my__skills .stats-container {
   width: 100%;
   max-width: 1000px;
   display: flex;
   align-content: center;
 }
 
-.stats-container .stat-item {
+.my__skills .stats-container .stat-item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -175,26 +174,26 @@ a {
   padding: 2%;
 }
 
-.stats-container .stat-item img {
+.my__skills .stats-container .stat-item img {
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
 }
 
-.stats-container .stat-path, .stats-container .stat-back {
+.my__skills .stats-container .stat-path, .my__skills .stats-container .stat-back {
   stroke-linecap: round;
   stroke-width: 2;
   fill: none;
 }
 
 @media only screen and (max-width: 580px) {
-  .stats-container .stat-item {
+  .my__skills .stats-container .stat-item {
     width: 50%;
   }
 }
 
-.stats-container .tooltip .tooltiptext {
+.my__skills .stats-container .tooltip .tooltiptext {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -215,12 +214,12 @@ a {
   z-index: 1;
 }
 
-.stats-container .tooltip .tooltiptext span {
+.my__skills .stats-container .tooltip .tooltiptext span {
   display: block;
   color: #ffffff;
 }
 
-.stats-container .tooltip .tooltiptext:after {
+.my__skills .stats-container .tooltip .tooltiptext:after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -231,38 +230,38 @@ a {
   border-color: transparent transparent currentColor transparent;
 }
 
-.stats-container .tooltip:hover .tooltiptext {
+.my__skills .stats-container .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 
-.stats-container .tooltip .fab {
+.my__skills .stats-container .tooltip .fab {
   position: absolute;
   top: 35%;
   left: 35%;
 }
 
-.stats-container .tooltip .fa-gulp {
+.my__skills .stats-container .tooltip .fa-gulp {
   left: 40%;
   color: #DB4446;
 }
 
-.stats-container .tooltip .fa-js {
+.my__skills .stats-container .tooltip .fa-js {
   color: #F0DB4F;
 }
 
-.stats-container .tooltip .fa-html5 {
+.my__skills .stats-container .tooltip .fa-html5 {
   color: #FF8C00;
 }
 
-.stats-container .tooltip .fa-sass {
+.my__skills .stats-container .tooltip .fa-sass {
   color: #F08080;
 }
 
-.stats-container .tooltip .fa-github-alt {
+.my__skills .stats-container .tooltip .fa-github-alt {
   color: #111;
 }
 
-.stats-container .tooltip .fa-adobe {
+.my__skills .stats-container .tooltip .fa-adobe {
   color: #4682B4;
 }
 
@@ -282,4 +281,78 @@ a {
 
 footer {
   background: #3f4243;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
+footer p {
+  color: #707678;
+  letter-spacing: .05em;
+}
+
+footer a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #e9e8e4;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
+  list-style: none;
+  margin-right: 5vw;
+}
+
+footer #vk::before {
+  content: "";
+  display: inline-block;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  margin-right: 1vw;
+  background: #597da3;
+}
+
+footer #ig::before {
+  content: "";
+  display: inline-block;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  margin-right: 1vw;
+  background: #E1306C;
+}
+
+footer #gh::before {
+  content: "";
+  display: inline-block;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  margin-right: 1vw;
+  background: #000000;
+}
+
+footer #tg::before {
+  content: "";
+  display: inline-block;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  margin-right: 1vw;
+  background: #0088cc;
+}
+
+footer #gm::before {
+  content: "";
+  display: inline-block;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  margin-right: 1vw;
+  background: #fff;
 }

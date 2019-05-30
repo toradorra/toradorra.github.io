@@ -18,6 +18,12 @@ $sass: #F08080
 $git: #111
 $adobe: #4682B4
 
+$vk: #597da3
+$ig: #E1306C
+$gh: #000000
+$tg: #0088cc
+$gm: #fff
+
 *
  box-sizing: border-box
  &:before, &:after
@@ -134,88 +140,86 @@ a
   h2
     font-size: 3em
     font-weight: 300
-/* Stat
-.stats-container
-  width: 100%
-  max-width: 1000px
-  display: flex
-  align-content: center
+  .stats-container
+    width: 100%
+    max-width: 1000px
+    display: flex
+    align-content: center
 
-  .stat-item
-    -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
-    box-sizing: border-box
-    position: relative
-    display: inline-block
-    width: 20%
-    padding: 2%
-    img
-      position: absolute
-      width: 100%
-      top: 0
-      left: 0
-
-  .stat-path, .stat-back
-    stroke-linecap: round
-    stroke-width: 2
-    fill: none
-
-  @media only screen and (max-width: 580px)
     .stat-item
-      width: 50%
-
-  .tooltip
-    .tooltiptext
       -webkit-box-sizing: border-box
       -moz-box-sizing: border-box
       box-sizing: border-box
-      position: absolute
-      top: 90%
-      left: 50%
-      -webkit-transform: translateX(-50%)
-      -ms-transform: translateX(-50%)
-      -o-transform: translateX(-50%)
-      transform: translateX(-50%)
-      padding: 6px 12px
-      background: #dddddd
-      color: $back-l
-      letter-spacing: 1px
-      text-align: center
-      white-space: nowrap
-      visibility: hidden
-      z-index: 1
-      span
-        display: block
-        color: #ffffff
-      &:after
-        content: ""
+      position: relative
+      display: inline-block
+      width: 20%
+      padding: 2%
+      img
         position: absolute
-        bottom: 100%
-        left: 50%
-        margin-left: -5px
-        border-width: 5px
-        border-style: solid
-        border-color: transparent transparent currentColor transparent
-    &:hover .tooltiptext
-      visibility: visible
-    .fab
-      position: absolute
-      top: 35%
-      left: 35%
-    .fa-gulp
-      left: 40%
-      color: $gulp
-    .fa-js
-      color: $JS
-    .fa-html5
-      color: $html
-    .fa-sass
-      color: $sass
-    .fa-github-alt
-      color: $git
-    .fa-adobe
-      color: $adobe
+        width: 100%
+        top: 0
+        left: 0
 
+    .stat-path, .stat-back
+      stroke-linecap: round
+      stroke-width: 2
+      fill: none
+
+    @media only screen and (max-width: 580px)
+      .stat-item
+        width: 50%
+
+    .tooltip
+      .tooltiptext
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        position: absolute
+        top: 90%
+        left: 50%
+        -webkit-transform: translateX(-50%)
+        -ms-transform: translateX(-50%)
+        -o-transform: translateX(-50%)
+        transform: translateX(-50%)
+        padding: 6px 12px
+        background: #dddddd
+        color: $back-l
+        letter-spacing: 1px
+        text-align: center
+        white-space: nowrap
+        visibility: hidden
+        z-index: 1
+        span
+          display: block
+          color: #ffffff
+        &:after
+          content: ""
+          position: absolute
+          bottom: 100%
+          left: 50%
+          margin-left: -5px
+          border-width: 5px
+          border-style: solid
+          border-color: transparent transparent currentColor transparent
+      &:hover .tooltiptext
+        visibility: visible
+      .fab
+        position: absolute
+        top: 35%
+        left: 35%
+      .fa-gulp
+        left: 40%
+        color: $gulp
+      .fa-js
+        color: $JS
+      .fa-html5
+        color: $html
+      .fa-sass
+        color: $sass
+      .fa-github-alt
+        color: $git
+      .fa-adobe
+        color: $adobe
 
 .info__block
   margin-top: 20vh
@@ -227,6 +231,61 @@ a
      img
       max-width: 500px
 
-
 footer
   background: $back-d
+  text-align: center
+  padding-top: 10vh
+  padding-bottom: 5vh
+  p
+    color: lighten($back-d, 20%)
+    letter-spacing: .05em
+  a 
+   text-decoration: none
+   cursor: pointer
+   color: $back-l
+  ul
+   display: flex
+   justify-content: center
+   li
+    list-style: none
+    margin-right: 5vw
+  #vk::before
+    content: ""
+    display: inline-block
+    border-radius: 100%
+    width: 4px
+    height: 4px
+    margin-right: 1vw
+    background: $vk
+  #ig::before
+    content: ""
+    display: inline-block
+    border-radius: 100%
+    width: 4px
+    height: 4px
+    margin-right: 1vw
+    background: $ig
+  #gh::before
+    content: ""
+    display: inline-block
+    border-radius: 100%
+    width: 4px
+    height: 4px
+    margin-right: 1vw
+    background: $gh
+  #tg::before
+    content: ""
+    display: inline-block
+    border-radius: 100%
+    width: 4px
+    height: 4px
+    margin-right: 1vw
+    background: $tg
+  #gm::before
+    content: ""
+    display: inline-block
+    border-radius: 100%
+    width: 4px
+    height: 4px
+    margin-right: 1vw
+    background: $gm
