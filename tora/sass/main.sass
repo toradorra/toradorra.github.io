@@ -81,6 +81,8 @@ a
 .general__block
  width: 100%
  margin-top: 5%
+ margin-bottom: 5%
+ padding: 0 5%
  .container
   display: grid
   grid-template-columns: 1fr 1fr
@@ -226,10 +228,22 @@ a
   margin-bottom: 20vh
   .container
     display: grid
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 35vw 65vw
+    margin: 2% 
     .left__bar
      img
       max-width: 500px
+    
+    .to__right
+      padding: 0 10%
+      h2
+        text-align: center
+      .info_box
+        color: lighten($dark, 30%)
+        list-style: none
+        margin-left: -2vw
+      p 
+        text-align: justify
 
 footer
   background: $back-d

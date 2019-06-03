@@ -82,6 +82,8 @@ a {
 .general__block {
   width: 100%;
   margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 0 5%;
 }
 
 .general__block .container {
@@ -272,11 +274,30 @@ a {
 
 .info__block .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 35vw 65vw;
+  margin: 2%;
 }
 
 .info__block .container .left__bar img {
   max-width: 500px;
+}
+
+.info__block .container .to__right {
+  padding: 0 10%;
+}
+
+.info__block .container .to__right h2 {
+  text-align: center;
+}
+
+.info__block .container .to__right .info_box {
+  color: #5e5e5e;
+  list-style: none;
+  margin-left: -2vw;
+}
+
+.info__block .container .to__right p {
+  text-align: justify;
 }
 
 footer {
