@@ -101,13 +101,13 @@ a
       white-space: nowrap
       margin: 0 auto
       letter-spacing: .15em
-      animation: typing 6s steps(44, end) 1s 1 normal both, blink-caret 500ms infinite normal
+      animation: typing 5s steps(25, end) 1s 1 normal both, blink-caret 700ms infinite normal
       @keyframes typing
         from
           width: 0
 
         to
-          width: 13em
+          width: 40vw
 
       @keyframes blink-caret
         from, to
@@ -115,11 +115,12 @@ a
 
         50%
           border-right-color: transparent
-   
-    p
-      margin-top: 20%
-      max-width: 35vw
-      text-align: right
+   p
+    &:nth-child(3)
+     margin-top: 10%
+     text-indent: 10%
+     text-align: justify
+     line-height: 2em
 
   .right__side
     grid-column: 2 / 3
@@ -210,12 +211,14 @@ a
         top: 35%
         left: 35%
       .fa-gulp
-        left: 40%
+        left: 43%
         color: $gulp
       .fa-js
         color: $JS
+        margin-left: 2%
       .fa-html5
         color: $html
+        left: 39%
       .fa-sass
         color: $sass
       .fa-github-alt
@@ -234,8 +237,9 @@ a
      .swiper-slide
       img
         max-width: 450px
+        height: 450px
         width: 100%
-    
+     
     .to__right
       padding: 0 10%
       h2
@@ -246,6 +250,8 @@ a
         margin-left: -2vw
       p 
         text-align: justify
+      span 
+       color: darken($pink, 15%)
 
 footer
   background: $back-d

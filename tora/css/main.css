@@ -107,7 +107,7 @@ a {
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
-  animation: typing 6s steps(44, end) 1s 1 normal both, blink-caret 500ms infinite normal;
+  animation: typing 5s steps(25, end) 1s 1 normal both, blink-caret 700ms infinite normal;
 }
 
 @keyframes typing {
@@ -115,7 +115,7 @@ a {
     width: 0;
   }
   to {
-    width: 13em;
+    width: 40vw;
   }
 }
 
@@ -128,10 +128,11 @@ a {
   }
 }
 
-.general__block .container .left__side .typewriter p {
-  margin-top: 20%;
-  max-width: 35vw;
-  text-align: right;
+.general__block .container .left__side p:nth-child(3) {
+  margin-top: 10%;
+  text-indent: 10%;
+  text-align: justify;
+  line-height: 2em;
 }
 
 .general__block .container .right__side {
@@ -243,16 +244,18 @@ a {
 }
 
 .my__skills .stats-container .tooltip .fa-gulp {
-  left: 40%;
+  left: 43%;
   color: #DB4446;
 }
 
 .my__skills .stats-container .tooltip .fa-js {
   color: #F0DB4F;
+  margin-left: 2%;
 }
 
 .my__skills .stats-container .tooltip .fa-html5 {
   color: #FF8C00;
+  left: 39%;
 }
 
 .my__skills .stats-container .tooltip .fa-sass {
@@ -280,6 +283,7 @@ a {
 
 .info__block .container .left__bar .swiper-slide img {
   max-width: 450px;
+  height: 450px;
   width: 100%;
 }
 
@@ -299,6 +303,10 @@ a {
 
 .info__block .container .to__right p {
   text-align: justify;
+}
+
+.info__block .container .to__right span {
+  color: #876970;
 }
 
 footer {

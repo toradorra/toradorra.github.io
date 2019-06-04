@@ -56,7 +56,14 @@ function triggerStats(){
 $(document).ready(function () {
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
-    direction: 'horizontal',
-    loop: true
+    effect: 'cube',
+    loop: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 1,
+      shadowScale: 0.8,
+    },
+      grabCursor: true
   })
 });
