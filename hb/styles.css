@@ -196,6 +196,9 @@ html {
   margin-bottom: 160px;
   text-align: center;
 }
+.events_posts img{
+  max-width: 250px;
+}
 .events_posts h2.block_title {
   color: #3b471f;
   font-size: 46px;
@@ -727,6 +730,7 @@ html {
 }
 .instagram_list {
   text-align: center;
+  margin-top: 15%;
 }
 .instagram_list h2.title_block {
   color: #2d2d2d;

@@ -303,6 +303,7 @@ a {
 
 .info__block .container .to__right p {
   text-align: justify;
+  text-indent: 2%;
 }
 
 .info__block .container .to__right span {

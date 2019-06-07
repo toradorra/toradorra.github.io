@@ -13,3 +13,5 @@ $('.timer').countTo({
         console.debug(this);
     }
 });
+
+new WOW().init();

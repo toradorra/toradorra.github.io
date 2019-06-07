@@ -38,6 +38,10 @@ h1 a:focus {
   margin-left: -5%;
 }
 
+.timeline ul li:nth-child(even) .btn-draw:after {
+  left: 0rem;
+}
+
 .timeline::before {
   content: "";
   position: absolute;
@@ -48,11 +52,11 @@ h1 a:focus {
 }
 
 .timeline .concentric-circles {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   position: absolute;
-  left: 37vw;
-  background-color: #aa9298;
+  left: 36.9vw;
+  background-color: #3f4243;
   border-radius: 50%;
   transform: translateX(-50%);
   transition: all 0.2s ease-in-out;
@@ -61,18 +65,15 @@ h1 a:focus {
 }
 
 .timeline .concentric-circles:hover {
-  transform: translateX(-50%) scale(1.2);
+  transform: translateX(-50%) scale(1.5);
 }
 
 @-webkit-keyframes ripple {
-  20% {
-    box-shadow: 0px 0px 0px 4px #bca9ae, 0px 0px 0px 5px #c0afb3;
-  }
   50% {
-    box-shadow: 0px 0px 0px 4px #bca9ae, 0px 0px 0px 5px #9eb99a, 0px 0px 0px 10px #e9e8e4, 0px 0px 2px 12px #d7cbce;
+    box-shadow: 0px 0px 0px 2px #e9e8e4, 0px 0px 2px 3px #aa9298;
   }
   100% {
-    box-shadow: 0px 0px 0px 4px #bca9ae, 0px 0px 0px 5px #9eb99a, 0px 0px 0px 10px #e9e8e4, 0px 0px 2px 12px #d7cbce, 0px 0px 0px 14px #ede8e9, 0px 0px 4px 15px #d7cbce;
+    box-shadow: 0px 0px 0px 2px #e9e8e4, 0px 0px 2px 3px #aa9298, 0px 0px 0px 6px #a68c93, 0px 0px 4px 10px #f0efec;
   }
 }
 
@@ -80,13 +81,41 @@ h1 a:focus {
   left: -0vw;
 }
 
-.timeline .part a {
+.timeline .part .btn-draw {
+  display: block;
+  margin-bottom: 5%;
+  padding: 0;
+  font-size: 1.5rem;
   text-decoration: none;
-  color: #111;
+  color: #444444;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.2, 0, 0, 2);
+  z-index: 1;
 }
 
-.timeline .part a:focus {
-  color: #aa9298;
+.timeline .part .btn-draw:after {
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0rem;
+  background-color: #aa9298;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transform-origin: bottom center;
+  z-index: -1;
+  width: 50%;
+}
+
+.timeline .part .btn-draw:hover {
+  color: #f0efec;
+  transition: .5s ease-in-out;
+  padding: .8%;
+}
+
+.timeline .part .btn-draw:hover:after {
+  right: 0rem;
+  height: 100%;
 }
 
 .timeline .part .time, .timeline .part .hash {
