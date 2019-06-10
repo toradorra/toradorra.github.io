@@ -34,15 +34,14 @@ html {
 
             .to__right {
                 background: #f3f3f3;
-
                 padding-top: 30%;
                 padding-left: 10%;
 
                 .text{
-                    
                     width: 100%;
                     transform: translateY(-50%);
-                    span{
+                    color: #00b4ff
+                    span {
                       color: $dark-c;
                       font-size: 3.1em;
                       font-weight: 900;
