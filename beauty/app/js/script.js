@@ -19,11 +19,18 @@
 //  btnScrollDown.addEventListener('click', scrollDown);
 // })();
 
-jQuery(document).ready(function () {
- //initialize swiper when document ready
- var mySwiper = new Swiper ('.swiper-container', {
-   // Optional parameters
-   direction: 'vertical',
-   loop: true
- })
+
+function videoplay(button) {
+  var par = button.parentNode;
+  par.innerHTML = '<iframe src="//www.youtube.com/embed/ID-VIDEO?autoplay=1" scrolling="no" style="width: 100%; height: 100%;"></iframe>';
+}
+
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 });
