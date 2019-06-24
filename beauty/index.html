@@ -11,16 +11,39 @@
  <link rel="stylesheet" href="app/fontawesome-free-5.9.0-web/css/fontawesome.min.css">
  <link rel="stylesheet" href="../beauty/app/dist/css/swiper.min.css">
  <link rel="shortcut icon" href="./app/img/favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" type="text/css" href="./wow-animation/animate.min.css">
 
  <title>Creativity</title>
 
 </head>
 
 <body>
-
  <header class="main-header grid" style="background-image: url(app/img/general.png);">
-
-	<div class="header-content grid">
+  <aside id="menu">
+    <div id="toggle">
+      <svg id="burger-menu" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+        <rect width="32" height="32" fill="none"/>
+        <line id="line-2" x1="0" y1="16" x2="32" y2="16" fill="none" stroke="#e7e7e7" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="line-3" x1="0" y1="22" x2="32" y2="22" fill="none" stroke="#e7e7e7" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="line-1" x1="0" y1="10" x2="32" y2="10" fill="none" stroke="#e7e7e7" stroke-miterlimit="10" stroke-width="2"/>
+      </svg>
+    </div>
+    <ul id="menu-items">
+      <li id="user">
+        <label for="user"><a href="#gallerys">gallery</a></label>
+      </li>
+      <li id="clients">
+        <label for ="clients"><a href="#client">clients</a></label>
+      </li>
+      <li id="layers">
+        <label for="layers"><a href="#abouts">about us</a></label>
+      </li>
+      <li id="contacts">
+        <label for ="contacts"><a href="#form">contacts</a></label>
+      </li>
+    </ul>
+  </aside>
+	<div class="header-content grid wow fadeInDown delay-1s">
     <h1>We’ve got the talent</h1>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br> Aenean commodo ligula eget dolor. Aenean massa.</p>
 		<div class="header-buttons">
@@ -31,17 +54,17 @@
  </header>
  
  <section class="intro">
-    <div class="intro__text grid">
-     <h2>Introduction</h2>
+    <div class="intro__text grid wow fadeInLeft delay-2s">
+     <h2 class="title">Introduction</h2>
      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere totam nam dolorum, iste eos vel alias culpa nulla obcaecati, voluptatem commodi.</p>
   </div>
  </section>
 
  <section class="button grid">
-  <a href="#" class="button__cli">Pure Creativity.</a>
+  <a href="#" class="button__cli wow pulse delay-2s">Pure Creativity.</a>
  </section>
 
- <section class="gallery grid">
+ <section id="gallerys" class="gallery grid wow fadeInUpBig delay-5s">
    <h2>Some of our work</h2>
    <ul>
     <li>all</li>
@@ -109,12 +132,12 @@
  </section>
 
  <section class="button_2 grid">
-   <a href="#" class="button__cli">We’re here to help.</a>
+   <a href="#" class="button__cli wow pulse delay-2s">We’re here to help.</a>
  </section>
 
- <section class="clients grid">
+ <section id="client" class="clients grid">
    <h2>our clients</h2>
-   <div class="clients__logo grid">
+   <div class="clients__logo grid wow bounce delay-2s">
     <img src="./app/img/l1.png" alt="">
     <img src="./app/img/l2.png" alt="">
     <img src="./app/img/l3.png" alt="">
@@ -123,7 +146,7 @@
    </div>
  </section>
 
- <section class="about_us grid">
+ <section id="abouts" class="about_us grid wow fadeInUpBig delay-5s">
     <h2>about us</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
      </p>
@@ -168,19 +191,18 @@
       </div>
  </section>
 
- <section class="videoplay">
-    <div class="video1">
-        <div class="video1-play" onclick="videoplay(this);"></div>
-    </div>
+ <section id="videoplay" class="videoplay">
+  <iframe width="1287" height="496" src="https://www.youtube.com/embed/8SIpMztZhwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
  </section>
 
  <section class="why__we">
   <div class="wrapper">
-    <div class="text">
+    <div class="text wow fadeInLeft delay-5s">
      <h2>WHY CHOOSE US</h2>
      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure commodi consectetur, aperiam libero at fugiat cupiditate id aut dignissimos eaque sit veniam. Reiciendis dolorum eveniet nisi. Deserunt quas incidunt porro.</p>
     </div>
-    <div class="swiper-container">
+    <div class="swiper-container wow fadeInRight delay-5s">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img class="tel" src="../beauty/app/img/t.png" alt="">
             <h3>App Design</h3>
@@ -206,19 +228,19 @@
   </div>
  </section>
 
- <section class="button_2 third grid">
+ <section class="button_2 third grid wow pulse delay-5s">
   <a href="#" class="button__cli">We’re here to help.</a>
  </section>
 
- <section class="intro secondary">
+ <section class="intro secondary wow fadeInUp delay-5s">
   <div class="intro__text grid">
    <h2>Get in touch</h2>
    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos in sint inventore obcaecati qui ab facere laboriosam aliquam voluptas praesentium mollitia distinctio odio, fuga optio atque nesciunt itaque labore perspiciatis.</p>
 </div>
  </section>
 
- <section class="form__social grid">
-  <div class="left__form">
+ <section id="form" class="form__social grid">
+  <div class="left__form wow fadeInLeft delay-5s">
    <h3>Our Location</h3>
    <ul class="contact">
      <li>174 Mimosa ST. NW</li>
@@ -235,7 +257,7 @@
    </ul>
   </div>
 
-  <div class="right__form">
+  <div class="right__form wow fadeInRight delay-5s">
   <form>
     <input type="text" name="fname" placeholder="Name">
     <input type="email" name="email" placeholder="Email"> <br>
@@ -246,7 +268,7 @@
   </div>
  </section>
 
- <footer class="footer grid">
+ <footer class="footer grid wow fadeInUp delay-6s">
   <div class="logo">
     <div class="logo__letter">
       <img src="../beauty/app/img/Logo.png" alt="">
@@ -259,9 +281,9 @@
   <p>2014 <a href="#">© Samir Timezguida.</a> All Rights Reserved.</p>
  </footer>
 
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="./app/js/script.js"></script>
-
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
@@ -270,8 +292,7 @@
 
   <script>
       var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        
         freeMode: true,
         pagination: {
           el: '.swiper-pagination',
@@ -283,20 +304,40 @@
           // when window width is <= 320px
           320: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 30
           },
           // when window width is <= 480px
           480: {
             slidesPerView: 1,
-            spaceBetween: 25
+            spaceBetween: 30
           },
           // when window width is <= 640px
           640: {
+            slidesPerView: 2,
+            spaceBetween: 25
+          }
+        },
+
+        breakpointsInverse: true,
+        breakpoints: {
+
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+
+          1200: {
             slidesPerView: 3,
             spaceBetween: 30
           }
         }
+  
       });
+  </script>
+  
+  <script src="./wow-animation/wow.min.js"></script>
+  <script>
+    new WOW().init();
   </script>
 </body>
 </html>

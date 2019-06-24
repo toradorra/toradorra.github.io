@@ -1,32 +1,16 @@
-var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        freeMode: true,
-        
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
+$('#toggle').click(function() {
+  $("#burger-menu").toggleClass('open');
+  $("#toggle").toggleClass('open');
+  $("#menu").toggleClass('open');
+});
 
-        // Responsive breakpoints
-        breakpoints: {
-
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 5
-          },
-          
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-          
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 30
-          }
-        }
-      });
+$(function() {
+  $('.burger-box,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart', function(e) {
+    e.preventDefault();
+    $('.burger-box').toggleClass('is-open');
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
+  });
+});
 
 function videoplay(button) {
   var par = button.parentNode;
