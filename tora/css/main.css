@@ -1,5 +1,169 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Mono&display=swap&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap&subset=cyrillic");
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .head__menu .container {
+    display: block !important;
+  }
+  .head__menu .container h1 {
+    text-align: center;
+  }
+  .head__menu .container ul {
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .head__menu .container ul li {
+    margin-left: 25% !important;
+    margin-right: 0 !important;
+  }
+  .general__block .container {
+    grid-template-columns: 1fr !important;
+  }
+  .general__block .container .right__side {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+  }
+  .my__skills .stats-container {
+    display: block !important;
+  }
+  .info__block {
+    margin: 5vh 0 !important;
+  }
+  .info__block .container {
+    grid-template-columns: 90% !important;
+    justify-content: center !important;
+  }
+  footer {
+    padding: 5vh 0 !important;
+  }
+  footer ul {
+    justify-content: space-around !important;
+  }
+}
+
+/**/
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .head__menu .container {
+    display: block !important;
+  }
+  .head__menu .container h1 {
+    text-align: center;
+  }
+  .head__menu .container ul {
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .head__menu .container ul li {
+    margin-left: 25% !important;
+    margin-right: 0 !important;
+  }
+  .general__block .container {
+    grid-template-columns: 1fr !important;
+  }
+  .general__block .container .right__side {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+    margin-top: -20%;
+  }
+  .my__skills .stats-container {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .info__block {
+    margin: 5vh 0 !important;
+  }
+  .info__block .container {
+    grid-template-columns: 90% !important;
+    justify-content: center !important;
+  }
+  footer {
+    padding: 5vh 0 !important;
+  }
+  footer ul {
+    justify-content: space-around !important;
+  }
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .general__block .container {
+    grid-template-columns: 1fr !important;
+  }
+  .general__block .container .right__side {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+    margin-top: -20%;
+  }
+  .general__block .container .right__side img:nth-child(1) {
+    padding: 10% !important;
+    margin-top: -10% !important;
+  }
+  .my__skills .stats-container {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .info__block {
+    margin: 5vh 0 !important;
+  }
+  .info__block .container {
+    grid-template-columns: 90% !important;
+    justify-content: center !important;
+  }
+  footer {
+    padding: 5vh 0 !important;
+  }
+  footer ul {
+    justify-content: space-around !important;
+  }
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .general__block .container {
+    grid-template-columns: 1fr !important;
+  }
+  .general__block .container .right__side {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 / 3 !important;
+  }
+  .general__block .container .right__side img:nth-child(1) {
+    padding: 10% !important;
+    margin-top: -10% !important;
+  }
+  .general__block .container .left__side {
+    grid-row: 1 / 3 !important;
+  }
+  .my__skills .stats-container {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .info__block {
+    margin: 5vh 0 !important;
+  }
+  .info__block .container {
+    grid-template-columns: 90% !important;
+    justify-content: center !important;
+  }
+  footer {
+    padding: 5vh 0 !important;
+  }
+  footer ul {
+    justify-content: space-around !important;
+  }
+  /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/
+}
+
 * {
   box-sizing: border-box;
 }

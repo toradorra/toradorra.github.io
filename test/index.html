@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+ <link rel="stylesheet" href="./app/css/main.css">
+
+ <title>Test</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+   <header class="top_header" style="background: url('./app/img/bg_photo.jpg.png')">
+    <div class="navigation grid">
+     <a href="index.html" class="logotype"><img src="./app/img/logo_header.svg" alt="" height="100px" width="100px"></a>
+     <span class="line"></span>
+     <p class="text">Сервис онлайн-консультирования<br><a href="#">чат на сайт + 10 каналов</a></p>
+     
+     <nav id="mainnav" class="group">
+      <div id="menu">&#x2261;</div> 
+      <ul>  
+        <li><a href="#">установка</a></li>  
+        <li><a href="#">возможности</a></li>  
+        <li><a href="#">стоимость</a></li>    
+      </ul> 
+     </nav> 
+     <a href="#" id="btn">регистрация</a> 
+    </div>
+     
+
+     <div class="header grid">
+      <div class="header__left">
+       <h2>Принимайте обращения клиентов из разных каналов в одном сервисе</h2>
+       <a href="#" class="btn">Начать обрабатывать заявки с Webim</a>
+     </div>
+     <div class="header__right">
+       <img src="./app/img/img_01_x1.png" alt="">
+     </div>
+    </div>
+   </header>
+
+   <section id="advantages" class="advantages grid">
+     <div class="content">
+       <h3>Гибкие настройки внешнего вида<br> и взаимодействия с клиентами</h3>
+       <ul class="advantages__list grid">
+         <li class="grid"><span class="num">1</span>Форма обратной связи<br> и генератор лидов</li>
+         <li class="grid"><span class="num">2</span>Настройка дизайна<br> кнопки</li>
+         <li class="grid"><span class="num">3</span>Гибкая настройка<br> активных приглашений</li>
+         <li class="grid"><span class="num">4</span>Передача данных<br> и кликабельные ссылки<br> в собщениях</li>
+         <li class="grid"><span class="num">5</span>Редактирование<br> и удаление отправленых<br> сообщений</li>
+         <li class="grid"><span class="num">6</span>Шаблоны ответов<br> и проверка орфографии</li>
+         <li class="grid"><span class="num">7</span>Отправка эмодзи<br> и оценка качества диалога</li>
+         <li class="grid"><span class="num">8</span>Наблюдение за печатью<br> сообщения посетителем</li>
+       </ul>
+     </div>
+   </section>
+
+   <section class="contact grid">
+    <h3>Регистрация</h3>
+    <form class="contact__form grid">
+     <input type="name" id="input-name" placeholder="Имя">
+     <input type="tel" id="input-tel" placeholder="Телефон">
+     <input type="email" id="input-email" placeholder="Email">
+     <input type="password" id="input-password" placeholder="Пароль">
+     <textarea name="message" type="text" id="input-message" placeholder="Сайт"></textarea>
+    </form>
+  
+    <div class="items">
+      <div class="item">
+        <form action="">
+          <label for="checkbox">
+            <div id="check" class="check checked">
+              <i id="fas" class="fas fa-check active"></i>
+            </div>
+              <input type="checkbox" id="checkbox">
+          </label>
+        </form>
+      </div>
+      <div class="item">
+        <p>
+         Регистрируясь в системе, я принимаю условия<br>
+         <a href="#">Лицензионного соглашения</a>,<a href="#">Политики конфиденциальности</a><br>
+          и даю Согласие<a href="#"> на обработку персональных данных</a>.
+        </p>
+        </div>
+      </div>
+    
+    <a href="#" class="contact__btn">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+   </section>
+
+   <footer class="footer grid">
+    <h3>© Webim, 2019</h3>
+    <a href="#">Политика конфиденциальности</a> 
+   </footer>
+
+
+ </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="app/js/script.js"></script>
+</body>
+</html>
