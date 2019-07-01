@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2"
   }
 }

@@ -1,87 +1,108 @@
 const gulp = require("gulp");
-const sass = require("gulp-sass");
+const concat = require("gulp-concat");
 const del = require("del");
-const browsersync = require("browser-sync").create();
+const sass = require("gulp-sass");
+const browsersync = require("browser-sync");
 
-function browserSync(done) {
-  browsersync.init({
-    server: {
-      baseDir: ".",
-    },
-    port: 3000,
-  });
-  done();
-}
+const paths = {
+  html: {
+    src: ["./src/index.html", "./src/pages/**/*.html"],
+    dist: "./dist/",
+    watch: ["./src/index.html", "./src/pages/**/*.html"]
+  },
+  styles: {
+    src: "./src/styles/main.sass",
+    dist: "./dist/styles/",
+    watch: ["./src/styles/**/*.scss", "./src/styles/**/*.sass"]
+  },
+  scripts: {
+    src: ["./src/js/vendor/*.js", "./src/js/index.js"],
+    dist: "./dist/js/",
+    watch: ["./src/js/**/*.js"]
+  },
+  images: {
+    src: ["./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}"],
+    dist: "./dist/img/",
+    watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
+  },
+  videos: {
+    src: ["./src/video/**/*"],
+    dist: "./dist/video/",
+    watch: "./src/video/**/*"
+  },
+  fonts: {
+    src: "./src/fonts/**/*.{woff,woff2}",
+    dist: "./dist/fonts/",
+    watch: "./src/fonts/**/*.{woff,woff2}"
+  }
+};
 
+gulp.task("clean", () => {
+  return del(["./dist/*"]);
+});
 
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
+gulp.task("fonts", () => {
+  return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dist));
+});
 
-
-function clean() {
-  return del(["dist"]);
-}
-
-
-function images() {
+gulp.task("images", () => {
   return gulp
-    .src("app/img/**/*")
-    .pipe(gulp.dest("dist/img"));
-}
+    .src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dist))
+    .on("end", browsersync.reload);
+});
 
+gulp.task("videos", () => {
+  return gulp.src(paths.videos.src).pipe(gulp.dest(paths.videos.dist));
+});
 
-function videos() {
+gulp.task("scripts", () => {
   return gulp
-    .src("app/video/**/*")
-    .pipe(gulp.dest("dist/video"));
-}
+    .src(paths.scripts.src)
+    .pipe(concat("bundle.js"))
+    .pipe(gulp.dest(paths.scripts.dist))
+    .on("end", browsersync.reload);
+});
 
-
-function css() {
+gulp.task("styles", () => {
   return gulp
-    .src(["app/sass/**/*.sass", "app/css/**/*.css"])
-    .pipe(sass({outputStyle: "expanded"}))
-    .pipe(gulp.dest("dist/css/"))
+    .src(paths.styles.src)
+    .pipe(sass())
+    .pipe(gulp.dest(paths.styles.dist))
     .pipe(browsersync.stream());
-}
+});
 
+gulp.task("html", () => {
+  return gulp
+    .src(paths.html.src)
+    .pipe(gulp.dest(paths.html.dist))
+    .pipe(browsersync.stream());
+});
 
-function scripts() {
-  return (
-    gulp
-      .src(["app/js/**/*"])
-      .pipe(gulp.dest("dist/js/"))
-      .pipe(browsersync.stream())
-  );
-}
+gulp.task("serve", () => {
+  browsersync.init({
+    server: "./dist/",
+    port: 4000,
+    notify: true
+  });
 
+  gulp.watch(paths.html.watch, gulp.parallel("html"));
+  gulp.watch(paths.styles.watch, gulp.parallel("styles"));
+  gulp.watch(paths.scripts.watch, gulp.parallel("scripts"));
+  gulp.watch(paths.images.watch, gulp.parallel("images"));
+  gulp.watch(paths.fonts.watch, gulp.parallel("fonts"));
+});
 
-function watchFiles() {
-  gulp.watch(["app/sass/**/*", "app/css/**/*.css"], css);
-  gulp.watch("app/js/**/*");
-  gulp.watch(
-    [
-      "./_includes/**/*",
-      "./_layouts/**/*",
-      "./_pages/**/*",
-      "./_posts/**/*",
-      "./_projects/**/*",
-    ],
-    gulp.series(browserSyncReload),
-  );
-  gulp.watch(".app/img/**/*", images);
-}
+const development = gulp.series(
+  "clean",
+  gulp.parallel(["html", "styles", "scripts", "images", "videos", "fonts"]),
+  gulp.parallel("serve")
+);
 
-const js = gulp.series(scripts);
-const build = gulp.series(clean, gulp.parallel(css, images, videos, js));
-const watch = gulp.parallel(watchFiles, browserSync);
+const build = gulp.series(
+  "clean",
+  gulp.series(["html", "styles", "scripts", "images", "videos", "fonts"])
+);
 
-exports.images = images;
-exports.css = css;
-exports.js = js;
-exports.clean = clean;
 exports.build = build;
-exports.watch = watch;
-exports.default = build;
+exports.default = development;
