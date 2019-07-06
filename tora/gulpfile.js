@@ -64,7 +64,7 @@ gulp.task("scripts", () => {
     .on("end", browsersync.reload);
 });
 
-gulp.task("styles", () => {
+gulp.task("main.scss", () => {
   return gulp
     .src(paths.styles.src)
     .pipe(sass())
@@ -87,7 +87,7 @@ gulp.task("serve", () => {
   });
 
   gulp.watch(paths.html.watch, gulp.parallel("html"));
-  gulp.watch(paths.styles.watch, gulp.parallel("styles"));
+  gulp.watch(paths.styles.watch, gulp.parallel("main.scss"));
   gulp.watch(paths.scripts.watch, gulp.parallel("scripts"));
   gulp.watch(paths.images.watch, gulp.parallel("images"));
   gulp.watch(paths.fonts.watch, gulp.parallel("fonts"));
@@ -95,13 +95,13 @@ gulp.task("serve", () => {
 
 const development = gulp.series(
   "clean",
-  gulp.parallel(["html", "styles", "scripts", "images", "videos", "fonts"]),
+  gulp.parallel(["html", "main.scss", "scripts", "images", "videos", "fonts"]),
   gulp.parallel("serve")
 );
 
 const build = gulp.series(
   "clean",
-  gulp.series(["html", "styles", "scripts", "images", "videos", "fonts"])
+  gulp.series(["html", "main.scss", "scripts", "images", "videos", "fonts"])
 );
 
 exports.build = build;
