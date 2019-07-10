@@ -6,17 +6,17 @@ const browsersync = require("browser-sync");
 
 const paths = {
   html: {
-    src: ["./src/index.html", "./src/pages/**/*.html"],
+    src: ["./src/**/*.html", "./src/pages/**/*.html"],
     dist: "./dist/",
     watch: ["./src/index.html", "./src/pages/**/*.html"]
   },
   styles: {
-    src: "./src/styles/main.sass",
+    src: "./src/styles/*.sass",
     dist: "./dist/styles/",
     watch: ["./src/styles/**/*.scss", "./src/styles/**/*.sass"]
   },
   scripts: {
-    src: ["./src/js/vendor/*.js", "./src/js/index.js"],
+    src: ["./src/js/vendor/**/*.js", "./src/js/index.js"],
     dist: "./dist/js/",
     watch: ["./src/js/**/*.js"]
   },
@@ -64,7 +64,7 @@ gulp.task("scripts", () => {
     .on("end", browsersync.reload);
 });
 
-gulp.task("main.scss", () => {
+gulp.task("index.js.scss", () => {
   return gulp
     .src(paths.styles.src)
     .pipe(sass())
@@ -87,7 +87,7 @@ gulp.task("serve", () => {
   });
 
   gulp.watch(paths.html.watch, gulp.parallel("html"));
-  gulp.watch(paths.styles.watch, gulp.parallel("main.scss"));
+  gulp.watch(paths.styles.watch, gulp.parallel("index.js.scss"));
   gulp.watch(paths.scripts.watch, gulp.parallel("scripts"));
   gulp.watch(paths.images.watch, gulp.parallel("images"));
   gulp.watch(paths.fonts.watch, gulp.parallel("fonts"));
@@ -95,13 +95,13 @@ gulp.task("serve", () => {
 
 const development = gulp.series(
   "clean",
-  gulp.parallel(["html", "main.scss", "scripts", "images", "videos", "fonts"]),
+  gulp.parallel(["html", "index.js.scss", "scripts", "images", "videos", "fonts"]),
   gulp.parallel("serve")
 );
 
 const build = gulp.series(
   "clean",
-  gulp.series(["html", "main.scss", "scripts", "images", "videos", "fonts"])
+  gulp.series(["html", "index.js.scss", "scripts", "images", "videos", "fonts"])
 );
 
 exports.build = build;
