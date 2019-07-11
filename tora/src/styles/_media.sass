@@ -49,3 +49,115 @@
     ul
       grid-template-columns: 1fr !important
       grid-gap: 3vh
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) and (max-width: 768px)
+  .head__menu
+    margin: 0 !important
+    padding: 0 !important
+
+    #menu
+      min-width: 230px !important
+
+    .container
+      display: block !important
+
+      h1
+        text-align: center
+
+      ul
+        flex-flow: column
+        margin: 0
+
+  .general__block
+    .container
+      grid-template-columns: 1fr !important
+
+      .right__side
+        grid-row: 2 / 3 !important
+
+        img
+          max-width: 500px !important
+          max-height: 500px !important
+  .my__skills
+
+    .stats-container
+      display: grid !important
+      grid-template-columns: 1fr 1fr 1fr !important
+      justify-items: center
+
+      .stat-item
+        width: 80% !important
+
+  .info__block
+    margin-top: 5vh !important
+    margin-bottom: 5vh !important
+
+    .container
+      grid-template-columns: 95vw !important
+      justify-content: center
+      align-items: center
+      padding: 0
+      margin: 0
+
+      .left__bar
+        justify-content: center
+        align-content: center
+        align-items: center
+        justify-items: center
+
+        .swiper-slide
+
+          img
+            height: auto !important
+            max-width: 700px !important
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 992px)
+  .my__skills
+
+    .stats-container
+      display: grid !important
+      grid-template-columns: 1fr 1fr 1fr !important
+      justify-items: center
+
+      .stat-item
+        width: 60% !important
+
+  .info__block
+    margin-top: 5vh !important
+    margin-bottom: 5vh !important
+
+    .container
+      grid-template-columns: 95vw !important
+      justify-content: center
+      align-items: center
+      padding: 0
+      margin: 0
+
+      .left__bar
+        justify-content: center
+        align-content: center
+        align-items: center
+        justify-items: center
+
+        .swiper-slide
+
+          img
+            height: auto !important
+            max-width: 600px !important
+            min-width: 500px !important
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) and (max-width: 1200px)
+  .info__block
+    .container
+      .left__bar
+        .swiper-slide
+          img
+            height: auto !important
+  footer
+    ul
+      padding: 0 20vw !important
