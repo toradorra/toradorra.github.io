@@ -1,56 +1,52 @@
 @import "vars"
 
-h1
-  a
-    color: $pink
 
-    &:focus
-      color: darken($pink, 10%)
+.head__menu
+  #menu
+    z-index: 2
+
 
 .timeline
-  position: relative
-  margin: 50px auto
-  width: 1000px
 
   ul
-    padding: 2%
     list-style: none
+    display: grid
+    grid-template-columns: 1fr 1fr
+    padding: 0 10vw
+    margin-bottom: 20vh
 
     li
       position: relative
-      width: 50%
-      box-sizing: border-box
-      padding: 2%
 
-      &:nth-child(odd)
-        float: left
-        text-align: right
-        clear: both
-        margin-right: -5%
+      .left
+        text-align: end
 
-      &:nth-child(even)
-        float: right
-        text-align: left
-        clear: both
-        margin-left: -5%
+      .right
+        text-align: start
 
-        .btn-draw:after
-          left: 0rem
+      &:nth-child(3), &:nth-child(6)
+        grid-column: 2/3
+        div:nth-child(2)
+         padding: 0 0 0 2vw
+        .btn-draw
+          &::after
+            left: 0
+
+      &:nth-child(1), &:nth-child(4), &:nth-child(7)
+        padding: 0 2vw 0 0
 
   &::before
     content: ""
     position: absolute
     left: 50%
-    height: 100%
+    height: 1080px
     width: 2px
     background: gray
 
   .concentric-circles
     width: 7px
     height: 7px
-    position: absolute
-    left: 36.9vw
-    background-color: $back-d
+    background-color: $white
     border-radius: 50%
     transform: translateX(-50%)
     transition: all 0.2s ease-in-out
@@ -65,9 +61,6 @@ h1
 
         100%
           box-shadow: 0px 0px 0px 2px $back-l, 0px 0px 2px 3px $pink, 0px 0px 0px 6px darken($pink, 2%), 0px 0px 4px 10px lighten($back-l, 3%)
-
-    &.even
-      left: -0vw
 
   .part
     .btn-draw
@@ -97,7 +90,6 @@ h1
       &:hover
         color: lighten($back-l, 3%)
         transition: .5s ease-in-out
-        padding: .8%
 
         &:after
           right: 0rem
@@ -109,26 +101,30 @@ h1
       margin: 0
       padding: 0
 
+    p
+      color: lighten($back-d, 15%)
+
 
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px)
-  .head__menu
-    .container
-      display: none !important
+  .timeline
+    ul
+      grid-template-columns: 1fr !important
+      li
+        div:nth-child(2)
+          padding: 0 0 0 5vw !important
+        &:nth-child(1), &:nth-child(4), &:nth-child(7)
+          padding: 0 0 0 5vw
+        .left
+          text-align: start
+        &:nth-child(3), &:nth-child(6)
+          grid-column: 1/3
+        .btn-draw
+          &::after
+            left: 0
 
-      h1
-        text-align: center
-
-      ul
-        justify-items: center
-        flex-direction: column
-        text-align: center
-  .general__block
-    .container
-      grid-template-columns: 1fr
-
-      .right__side
-        grid-column: 1 / 2
-        grid-row: 2 / 3
+    &::before
+      left: 10%
+      height: 150vh

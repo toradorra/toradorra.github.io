@@ -8,7 +8,7 @@ const paths = {
   html: {
     src: ["./src/**/*.html", "./src/pages/**/*.html"],
     dist: "./dist/",
-    watch: ["./src/index.html", "./src/pages/**/*.html"]
+    watch: ["./src/**/*.html", "./src/pages/**/*.html"]
   },
   styles: {
     src: "./src/styles/*.sass",
