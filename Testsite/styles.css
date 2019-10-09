@@ -88,6 +88,9 @@ h1 {
 	padding: 10px;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 10px;
+	grid-template-rows: 1fr;
+	display: grid;
+	margin-top: 50px;
 }
 
 .portfolio-item {
