@@ -106,3 +106,9 @@ h1 {
 	position: relative;
 	cursor: pointer;
 }
+
+.portfolio-item img {
+	max-width: 300px; 
+}
+
+
